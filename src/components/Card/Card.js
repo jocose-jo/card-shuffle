@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import "./Card.css";
 
-function Card(props) {
+function Card({index, onDelete, ...props}) {
   const [flipped, setFlipped] = useState(false);
 
   const handleClick = () => {
@@ -19,6 +19,7 @@ function Card(props) {
           <div className="card-text">Back of Card</div>
         </div>
       </ReactCardFlip>
+      <div className="delete-button" onClick={() => onDelete(index)}>-</div>
     </div>
   );
 }

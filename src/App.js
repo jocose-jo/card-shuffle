@@ -13,6 +13,10 @@ function App() {
     setCards((prevCards) => [...prevCards, newCard]);
   };
 
+  const handleDeleteCard = (index) => {
+    setCards(prevCards => prevCards.filter((item, currIndex) => currIndex !== index));
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,8 +24,8 @@ function App() {
         <div className="App-card-container">
           <InputBar onEnter={handleInput} />
           <CardBox>
-            {cards.map((card) => (
-              <Card {...card}/>
+            {cards.map((card, i) => (
+              <Card index={i} onDelete={handleDeleteCard} {...card} />
             ))}
           </CardBox>
         </div>
