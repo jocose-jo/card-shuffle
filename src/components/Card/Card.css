@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  margin: 8px;
+  padding: 8px;
+  height: 200px;
+  width: 150px;
+  border-radius: 8px;
+  text-overflow: clip;
+  color: white;
+  cursor: pointer
+}
+
+.front {
+  background-color: green;
+}
+
+.back {
+  background-color: #fbd7f8;
+}
+
+.card-text {
+  color: black;
+  text-align: center;
+}
